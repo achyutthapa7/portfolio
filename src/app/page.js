@@ -1,9 +1,13 @@
-import React from 'react'
+"use client";
+import Home from "../components/Home";
+import React, { useEffect } from "react";
 
-const Home = () => {
+const Main = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      <Home />
+    </div>
+  );
+};
 
-export default Home
+export default Main;

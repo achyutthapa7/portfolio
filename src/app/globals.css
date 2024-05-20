@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+#bg_image {
+  background-image: url("../images/me.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 153px;
+  border-bottom-left-radius: 680px;
+}
+
+
+  
