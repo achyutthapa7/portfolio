@@ -9,7 +9,54 @@
   background-position: center;
   border-top-left-radius: 153px;
   border-bottom-left-radius: 680px;
+  box-shadow: 10px 10px 4000px 10px black inset;
+  filter: brightness(1.2);
 }
 
+.circle::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: rgb(206, 216, 208);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 160%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 150ms ease-in;
+}
+.circle:hover::before {
+  box-shadow: 10px 10px 600px 10px rgb(170, 38, 211);
+}
 
-  
+.left_circle::before {
+  background-image: url("../images/research.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  border-radius: 50%;
+}
+
+.middle_circle::before {
+  background-image: url("../images/prototype.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  border-radius: 50%;
+}
+
+.right_circle::before {
+  background-image: url("../images/code.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  border-radius: 50%;
+}
+
+.bg-image {
+  background-image: url("../images/me.jpeg");
+  background-position-x: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 64px;
+}

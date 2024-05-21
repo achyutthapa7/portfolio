@@ -1,4 +1,3 @@
-import Nav from "@/components/Nav";
 import "./globals.css";
 
 export const metadata = {
