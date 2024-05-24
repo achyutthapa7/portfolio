@@ -8,7 +8,7 @@ import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-
+import Paragraph from "./Paragraph";
 const Home = () => {
   const paragraph = {
     transition: `transition ease-linear delay-150 inline-block`,
@@ -35,146 +35,11 @@ const Home = () => {
             <Nav />
           </div>
           <div className="lg:flex hidden flex-col px-28 py-10 gap-4">
-            <div className="my-0 flex flex-col">
-              <p
-                className={`my-0 text-[2em] font-bold text-slate-900 leading-10 inline-block tracking-[7.5px]`}
-                onMouseEnter={mouseEnter}
-                onMouseLeave={mouseLeave}
-              >
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[12deg]" : ""
-                  } ${mouseMove ? "translate-y-[-5px]" : ""}`}
-                >
-                  F
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[-10deg]" : ""
-                  } ${mouseMove ? "translate-y-[2px]" : ""}`}
-                >
-                  U
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[12deg] " : ""
-                  } ${mouseMove ? "translate-y-[-3px]" : ""}`}
-                >
-                  L
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[-10deg]" : ""
-                  } ${mouseMove ? "translate-y-[3px]" : ""}`}
-                >
-                  L
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[12deg]" : ""
-                  } ${mouseMove ? "translate-y-[-2px]" : ""}`}
-                >
-                  S
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[-10deg]" : ""
-                  } ${mouseMove ? "translate-y-[-1px]" : ""}`}
-                >
-                  T
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? " rotate-[12deg] " : ""
-                  } ${mouseMove ? "translate-y-[2.3px]" : ""}`}
-                >
-                  A
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[-10deg]" : ""
-                  } ${mouseMove ? "translate-y-[-5px]" : ""}`}
-                >
-                  C
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[-10deg]" : ""
-                  } ${mouseMove ? "translate-y-[5px]" : ""}`}
-                >
-                  K
-                </span>
-              </p>
-              <p
-                className={`my-0 text-[2em] font-bold text-slate-900 leading-10 inline-block tracking-[7.5px]`}
-                onMouseEnter={mouseEnter}
-                onMouseLeave={mouseLeave}
-              >
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[12deg]" : ""
-                  } ${mouseMove ? "translate-y-[-10px]" : ""}`}
-                >
-                  D
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[-10deg]" : ""
-                  }`}
-                >
-                  E
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[12deg] " : ""
-                  } ${mouseMove ? "translate-y-[-7px]" : ""}`}
-                >
-                  V
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[-10deg]" : ""
-                  }`}
-                >
-                  E
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[12deg]" : ""
-                  } ${mouseMove ? "translate-y-[-9px]" : ""}`}
-                >
-                  L
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[-10deg]" : ""
-                  } ${mouseMove ? "translate-y-[-6px]" : ""}`}
-                >
-                  O
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? " rotate-[12deg] " : ""
-                  }`}
-                >
-                  P
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[-10deg]" : ""
-                  } ${mouseMove ? "translate-y-[-10px]" : ""}`}
-                >
-                  E
-                </span>
-                <span
-                  className={`${paragraph.transition} ${
-                    mouseMove ? "rotate-[-10deg]" : ""
-                  }`}
-                >
-                  R
-                </span>
-              </p>
-            </div>
+            <Paragraph
+              mouseEnter={mouseEnter}
+              mouseMove={mouseMove}
+              mouseLeave={mouseLeave}
+            />
             <div className="my-0">
               <p className="my-0">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -212,7 +77,25 @@ const Home = () => {
       </div>
 
       <div className="lg:hidden w-full h-screen absolute top-0 bg-image">
-        <div className="absolute right-0 px-10 py-10">
+        <ul className="flex absolute left-0 top-[20px] gap-2 px-5">
+          <Link href={"https://github.com/achyutthapa7"} target="_blank">
+            <GitHubIcon className=" text-2xl text-white" />
+          </Link>
+          <Link
+            href={"https://www.linkedin.com/in/achyut-thapa-023bb62a2/"}
+            target="_blank"
+          >
+            <LinkedInIcon className=" text-2xl text-white" />
+          </Link>
+          <Link
+            href={"https://www.facebook.com/achyut.thapa.522 "}
+            target="_blank"
+          >
+            <FacebookIcon className=" text-2xl text-white" />
+          </Link>
+        </ul>
+
+        <div className="absolute right-8 top-[13px]">
           {isOpen ? (
             <MenuOutlinedIcon
               className="text-white text-4xl cursor-pointer"
@@ -225,6 +108,7 @@ const Home = () => {
             />
           )}
         </div>
+
         <div
           className={`transition ease-in-out delay-150 w-[250px] absolute h-screen shadow-2xl ${
             isOpen ? "translate-x-[-100%]" : ""
@@ -277,7 +161,7 @@ const Home = () => {
               DEVELOPER
             </p>
           </div>
-          <div className="my-0 flex flex-col items-center p-2 bg-white backdrop-blur-sm">
+          <div className="my-0 flex flex-col items-center p-3 bg-white/ backdrop-blur-3xl rounded-3xl shadow-xl">
             <p className="text-center text-gray-700 tracking-widest">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
               aliquam, reiciendis beatae
