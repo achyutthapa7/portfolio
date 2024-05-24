@@ -41,12 +41,12 @@ const Home = () => {
               mouseLeave={mouseLeave}
             />
             <div className="my-0">
-              <p className="my-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus non in, iusto consequuntur, modi voluptatibus enim
+              <p className="my-0 tracking-[3px] font-thin">
+                Achyut Thapa is a full-stack developer from Koteshwor,
+                specializing in creating comprehensive web solutions.
               </p>
             </div>
-            <div className="m-0">
+            <div className="m-0 ">
               <Link href={"/contact"}>
                 <button className="py-2 px-8 bg-black text-white hover:shadow-2xl hover:rounded-lg">
                   Hire Me
@@ -152,7 +152,7 @@ const Home = () => {
           </Link>
         </div>
 
-        <div className="md:w-6/12 sm:w-3/4 w-full h-[200px] bg-white/ absolute top-[30%] md:left-1/4 sm:left-[12.5%] ">
+        <div className="md:w-6/12 sm:w-3/4 w-full h-[200px] bg-white/ absolute md:top-[15%] top-[35%] md:left-1/4 sm:left-[12.5%] ">
           <div className="my-0 flex flex-col items-center">
             <p className="tracking-[5px] text-[3em] font-thin text-white bg-gradient-to-l my-0">
               FULLSTACK
@@ -162,9 +162,9 @@ const Home = () => {
             </p>
           </div>
           <div className="my-0 flex flex-col items-center p-3 bg-white/ backdrop-blur-3xl rounded-3xl shadow-xl">
-            <p className="text-center text-gray-700 tracking-widest">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-              aliquam, reiciendis beatae
+            <p className="text-center text-gray-700 tracking-widest font-thin">
+              Achyut Thapa is a full-stack developer from Koteshwor,
+              specializing in creating comprehensive web solutions.
             </p>
           </div>
 
@@ -178,23 +178,25 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="absolute bg-black w-full h-[140px] bottom-0 lg:flex hidden justify-evenly text-slate-200 items-end px-20 py-5">
-        <div className="flex flex-col items-center relative circle left_circle gap-3 ">
-          <p className="font-bold text-[12px]">RESEARCH</p>
-          <span className="text-sm">
-            Lorem ipsum dolor sit amet consectetur?
+      <div className="absolute bg-black w-full h-[140px] bottom-0 lg:flex md:flex hidden justify-evenly text-slate-200 items-end px-5 py-5">
+        <div className="flex flex-col items-center relative circle left_circle gap-3">
+          <p className="font-bold text-[12px] tracking-[1.1px]">RESEARCH</p>
+          <span className="text-sm text-center font-thin tracking-[1.1px]">
+            understanding user needs and market trends to inform project goals.
           </span>
         </div>
         <div className="flex flex-col items-center relative circle middle_circle gap-3 ">
-          <p className="font-bold text-[12px]">PROTOTYPE</p>
-          <span className="text-sm">
-            Lorem ipsum dolor sit amet consectetur?
+          <p className="font-bold text-[12px] tracking-[1.1px]">PROTOTYPE</p>
+          <span className="text-sm text-center font-thin tracking-[1.1px]">
+            creates interactive models to test and refine concepts, ensuring
+            optimal user experience.
           </span>
         </div>
         <div className="flex flex-col items-center relative circle right_circle gap-3 ">
-          <p className="font-bold text-[12px]">CODE </p>
-          <span className="text-sm">
-            Lorem ipsum dolor sit amet consectetur?
+          <p className="font-bold text-[12px] tracking-[1.1px]">CODE </p>
+          <span className="text-sm text-center font-thin tracking-[1.1px]">
+            develops robust, scalable solutions, turning prototypes into fully
+            functional applications.{" "}
           </span>
         </div>
       </div>

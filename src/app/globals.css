@@ -20,10 +20,11 @@
   background-color: rgb(206, 216, 208);
   border-radius: 50%;
   position: absolute;
-  bottom: 160%;
+  bottom: 120%;
   left: 50%;
   transform: translateX(-50%);
   transition: all 150ms ease-in;
+  /* z-index: -1; */
 }
 .circle:hover::before {
   box-shadow: 10px 10px 600px 10px rgb(170, 38, 211);
