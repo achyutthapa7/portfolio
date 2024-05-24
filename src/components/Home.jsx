@@ -10,7 +10,10 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const Home = () => {
-  const para = useRef();
+  const paragraph = {
+    transition: `transition ease-linear delay-150 inline-block`,
+  };
+
   const path = usePathname();
   const [isOpen, setIsOpen] = useState(true);
   const [mouseMove, setMouseMove] = useState(false);
@@ -39,63 +42,63 @@ const Home = () => {
                 onMouseLeave={mouseLeave}
               >
                 <span
-                  className={`transition ease-linear delay-150 inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[12deg]" : ""
                   } ${mouseMove ? "translate-y-[-5px]" : ""}`}
                 >
                   F
                 </span>
                 <span
-                  className={`transition ease-linear delay-150  inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[-10deg]" : ""
                   } ${mouseMove ? "translate-y-[2px]" : ""}`}
                 >
                   U
                 </span>
                 <span
-                  className={`transition ease-linear delay-150 inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[12deg] " : ""
                   } ${mouseMove ? "translate-y-[-3px]" : ""}`}
                 >
                   L
                 </span>
                 <span
-                  className={`transition ease-linear delay-150  inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[-10deg]" : ""
                   } ${mouseMove ? "translate-y-[3px]" : ""}`}
                 >
                   L
                 </span>
                 <span
-                  className={`transition ease-linear delay-150  inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[12deg]" : ""
                   } ${mouseMove ? "translate-y-[-2px]" : ""}`}
                 >
                   S
                 </span>
                 <span
-                  className={`transition ease-linear delay-150  inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[-10deg]" : ""
                   } ${mouseMove ? "translate-y-[-1px]" : ""}`}
                 >
                   T
                 </span>
                 <span
-                  className={`transition ease-linear delay-150 inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? " rotate-[12deg] " : ""
                   } ${mouseMove ? "translate-y-[2.3px]" : ""}`}
                 >
                   A
                 </span>
                 <span
-                  className={`transition ease-linear delay-150  inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[-10deg]" : ""
                   } ${mouseMove ? "translate-y-[-5px]" : ""}`}
                 >
                   C
                 </span>
                 <span
-                  className={`transition ease-linear delay-150  inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[-10deg]" : ""
                   } ${mouseMove ? "translate-y-[5px]" : ""}`}
                 >
@@ -108,63 +111,63 @@ const Home = () => {
                 onMouseLeave={mouseLeave}
               >
                 <span
-                  className={`transition ease-linear delay-150 inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[12deg]" : ""
                   } ${mouseMove ? "translate-y-[-10px]" : ""}`}
                 >
                   D
                 </span>
                 <span
-                  className={`transition ease-linear delay-150  inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[-10deg]" : ""
                   }`}
                 >
                   E
                 </span>
                 <span
-                  className={`transition ease-linear delay-150 inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[12deg] " : ""
                   } ${mouseMove ? "translate-y-[-7px]" : ""}`}
                 >
                   V
                 </span>
                 <span
-                  className={`transition ease-linear delay-150  inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[-10deg]" : ""
                   }`}
                 >
                   E
                 </span>
                 <span
-                  className={`transition ease-linear delay-150  inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[12deg]" : ""
                   } ${mouseMove ? "translate-y-[-9px]" : ""}`}
                 >
                   L
                 </span>
                 <span
-                  className={`transition ease-linear delay-150  inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[-10deg]" : ""
                   } ${mouseMove ? "translate-y-[-6px]" : ""}`}
                 >
                   O
                 </span>
                 <span
-                  className={`transition ease-linear delay-150 inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? " rotate-[12deg] " : ""
                   }`}
                 >
                   P
                 </span>
                 <span
-                  className={`transition ease-linear delay-150  inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[-10deg]" : ""
                   } ${mouseMove ? "translate-y-[-10px]" : ""}`}
                 >
                   E
                 </span>
                 <span
-                  className={`transition ease-linear delay-150  inline-block ${
+                  className={`${paragraph.transition} ${
                     mouseMove ? "rotate-[-10deg]" : ""
                   }`}
                 >
@@ -225,7 +228,7 @@ const Home = () => {
         <div
           className={`transition ease-in-out delay-150 w-[250px] absolute h-screen shadow-2xl ${
             isOpen ? "translate-x-[-100%]" : ""
-          } flex flex-col bg-white/30 backdrop-blur-md border border-white/10 p-4`}
+          } flex flex-col bg-white/30 backdrop-blur-md border border-white/10 p-4 z-10`}
         >
           <Link
             href={"/"}
@@ -263,6 +266,31 @@ const Home = () => {
           >
             Contact
           </Link>
+        </div>
+
+        <div className="md:w-6/12 sm:w-3/4 w-full h-[200px] bg-white/ absolute top-[30%] md:left-1/4 sm:left-[12.5%] ">
+          <div className="my-0 flex flex-col items-center">
+            <p className="tracking-[5px] text-[3em] font-thin text-white bg-gradient-to-l my-0">
+              FULLSTACK
+            </p>
+            <p className="tracking-[5px] text-[3em] font-thin text-white bg-gradient-to-l my-0">
+              DEVELOPER
+            </p>
+          </div>
+          <div className="my-0 flex flex-col items-center p-2 bg-white backdrop-blur-sm">
+            <p className="text-center text-gray-700 tracking-widest">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+              aliquam, reiciendis beatae
+            </p>
+          </div>
+
+          <div className="m-0 flex justify-center my-5">
+            <Link href={"/contact"}>
+              <button className="py-2 px-8 bg-black text-white hover:shadow-2xl hover:rounded-lg">
+                Hire Me
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
 
