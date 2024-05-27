@@ -4,9 +4,11 @@ import Nav from "./Nav";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import Sidebar from "./Sidebar";
+import Card from "./Card";
 
 const Works = () => {
   const [isOpen, setIsOpen] = useState(true);
+  const works = [...Array(10)];
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -30,6 +32,15 @@ const Works = () => {
           )}
         </div>
         <Sidebar isOpen={isOpen} />
+      </div>
+      <div className="w-full h-screen lg:flex hidden flex-col gap-5 p-5 ">
+        <p className="text-3xl font-thin tracking-wide">My Works</p>
+        <div className="relative flex h-screen">
+          <div className="flex-1 "></div>
+          <div className="flex-1"></div>
+
+          <span id="divider"></span>
+        </div>
       </div>
     </div>
   );

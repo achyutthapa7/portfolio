@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState } from "react";
 import Nav from "./Nav";
@@ -31,6 +30,9 @@ const Contact = () => {
           )}
         </div>
         <Sidebar isOpen={isOpen} />
+      </div>
+      <div className="bg-yellow-900 w-full h-screen lg:flex hidden">
+        Contact
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState } from "react";
 import Nav from "./Nav";
@@ -16,7 +15,7 @@ const About = () => {
   return (
     <div className="relative">
       <Nav />
-      <div className="lg:hidden w-full h-screen absolute top-0">
+      <div className="lg:hidden flex w-full h-screen absolute top-0">
         <div className="absolute right-0 px-10 py-10">
           {isOpen ? (
             <MenuOutlinedIcon
@@ -32,6 +31,8 @@ const About = () => {
         </div>
         <Sidebar isOpen={isOpen} />
       </div>
+
+      <div className="bg-yellow-900 w-full h-screen lg:flex hidden">About</div>
     </div>
   );
 };
